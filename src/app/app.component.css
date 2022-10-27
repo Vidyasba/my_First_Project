@@ -1,0 +1,21 @@
+.header{
+    position:absolute;
+    width:100%;
+    height:40px;
+    background-color:  #563d7c;
+    color:white;
+    text-align: center;
+    font-weight: 500;
+    font-size: large;
+}
+.footer{
+    position:absolute;
+    width:100%;
+    height:35px;
+    background-color:  #563d7c;
+    color:white;
+    text-align: right;
+    font-weight: 300;
+    font-size: medium;
+    top:630px;
+}

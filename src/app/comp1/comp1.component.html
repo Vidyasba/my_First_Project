@@ -1,0 +1,29 @@
+<div class="back" style="position:absolute;top:50px;left:40px;color:black;cursor: pointer;">
+    <svg (click)="toprev()" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+      </svg>
+    </div>
+    <p style="position:absolute;top:55px;left:70px;font-size:13px;">To Prev Page</p>
+<h3 class="items">Click to highlight the items avaiable</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-success" (click)="find('veg')">Vegetables</button>
+            <button class="btn btn-success" (click)="find('dryfruits')">Dry Fruits</button>
+            <button class="btn btn-success" (click)="find('flower')">Flowers</button>
+            <button class="btn btn-success"(click)="find('fruit')">Fruits</button>
+            <button class="btn btn-danger" [disabled]="ClearDisbale" (click)="find('ntg')">Clear</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container2">
+    
+       
+           <td class="data"*ngFor="let item of items"
+            [ngClass]="{highlight:selecteditem === item.type?'typeofitem':''}"
+            [ngStyle]="{'font-size':(selecteditem === item.type?'typeofitem':'')? '22px' : '20px'}">{{item.name}}
+        </td>
+       
+    
+</div>
